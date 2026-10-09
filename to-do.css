@@ -1,1 +1,40 @@
+    body {
+        font-family: Josefin sans;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 100;
+        background-color: black;
+    }
 
+    .mobile-dark {
+        z-index: 99;
+    }
+    .mobile-light {
+        display: none;
+        z-index: 99;
+    }
+    .desktop-dark {
+        display: none;
+        z-index: 99;
+    }
+    .desktop-light {
+        display: none;
+        z-index: 99;
+    }
+    .create-todo-container {
+        background-color: rgb(26, 26, 26);
+        color: grey;
+    }
+    .num-items-text {
+        color: grey;
+    }
+    .clear-completed-text {
+        color: grey;
+    }
+    .tasks-container {
+        color: white;
+        border-width: 1px;
+        border-color: white;
+    }
