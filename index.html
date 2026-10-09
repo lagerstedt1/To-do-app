@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/to-do.css">
   
   <title>Todo app</title>
 
@@ -13,20 +15,53 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
 </head>
+
 <body>
-
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
+  <picture class="background-picture">
+    <source srcset="images/bg-mobile-dark.jpg" media="(max-width: 768px)">
+    <img src="images/bg-desktop-dark.jpg" alt="">
+  </picture>
+  <div class="canvas">
+    <div class="card">
+      <div class="create-todo-container">
+        <div class="task-container">
+          <button class="task-status-button"></button>
+          <p class="create-task-text"> Create a new todo... </p>
+        </div>
+      </div>
+      <div class="todo-list-container">
+        <div class="task-container">
+          <button class="task-status-button"></button>
+          <p class="task-text"> Task text goes here </p>
+        </div>
+      </div>
+      <div class="info-and-filters-container">
+        <p class="num-items-text">
+          5 items left
+        </p>
+        <div class="filter-container">
+          <a class="filter-activation-text" href="#">
+            all
+          </a>
+          <a class="filter-activation-text" href="#">
+            active
+          </a>
+          <a class="filter-activation-text" href="#">
+            completed
+          </a>
+        </div>
+        <a class="clear-completed-text" href="#">
+          clear completed
+        </a>
+      </div>
+      <p class="helper-text">
+        Drag and drop to reorder list
+      </p>
+    </div>
+  </div>
 </body>
+
 </html>
