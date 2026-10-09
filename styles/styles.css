@@ -23,6 +23,7 @@ body {
 }
 
 .card {
+    position: relative;
     width: 550px;
 
     display: flex;
@@ -32,6 +33,14 @@ body {
     border-radius: 20px;
 
     background-color: rgba(0, 0, 0, 0);
+}
+
+.large-title-text {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    font-size: 40px;
+    color: white;
 }
 
 .todo-list-container,
