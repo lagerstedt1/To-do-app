@@ -35,13 +35,24 @@ body {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.large-title-text {
+.title-and-themebutton-container {
     position: absolute;
-    margin: 0;
+    display: flex;
     top: -80px;
     left: 0;
+    right: 0;
+}
+
+.large-title-text {
+    margin: 0;
     font-size: 40px;
     color: white;
+}
+
+.theme-button {
+    margin-left: auto;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
 }
 
 .todo-list-container,

@@ -7,16 +7,15 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="stylesheet" href="styles/to-do.css">
-  
+
   <title>Todo app</title>
 
-  
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
 </head>
 
 <body>
@@ -26,7 +25,12 @@
   </picture>
   <div class="canvas">
     <div class="card">
-      <p class="large-title-text"> TODO </p>
+      <div class="title-and-themebutton-container">
+        <p class="large-title-text"> TODO </p>
+        <button class="theme-button">
+          <img src="images/icon-sun.svg" alt="">
+        </button>
+      </div>
       <div class="create-todo-container">
         <div class="task-container">
           <button class="task-status-button"></button>
