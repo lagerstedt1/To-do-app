@@ -1,6 +1,9 @@
 body {
     margin: 0;
     background-color: rgb(24, 24, 36);
+    font-family: 'Josefin Sans', Arial;
+        font-size: 18px;
+        z-index: 100;
 }
 
 .background-picture {
