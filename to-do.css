@@ -8,19 +8,7 @@
         background-color: black;
     }
 
-    .mobile-dark {
-        z-index: 99;
-    }
-    .mobile-light {
-        display: none;
-        z-index: 99;
-    }
-    .desktop-dark {
-        display: none;
-        z-index: 99;
-    }
-    .desktop-light {
-        display: none;
+    .background-picture {
         z-index: 99;
     }
     .create-todo-container {
