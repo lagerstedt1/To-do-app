@@ -1,36 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/styles.css">
   
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
   <title>Frontend Mentor | Todo app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 0.6875rem;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
+  <picture class="background-picture">
+    <source srcset="images/bg-mobile-dark.jpg" media="(max-width: 768px)">
+    <img src="images/bg-desktop-dark.jpg" alt="">
+  </picture>
+  <div class="canvas">
+    <div class="card">
+      <div class="create-todo-container">
+        <div class="task-container">
+          <button class="task-status-button"></button>
+          <p class="create-task-text"> Create a new todo... </p>
+        </div>
+      </div>
+      <div class="todo-list-container">
+        <div class="task-container">
+          <button class="task-status-button"></button>
+          <p class="task-text"> Task text goes here </p>
+        </div>
+      </div>
+      <div class="info-and-filters-container">
+        <p class="num-items-text">
+          5 items left
+        </p>
+        <div class="filter-container">
+          <a class="filter-activation-text" href="#">
+            all
+          </a>
+          <a class="filter-activation-text" href="#">
+            active
+          </a>
+          <a class="filter-activation-text" href="#">
+            completed
+          </a>
+        </div>
+        <a class="clear-completed-text" href="#">
+          clear completed
+        </a>
+      </div>
+      <p class="helper-text">
+        Drag and drop to reorder list
+      </p>
+    </div>
+  </div>
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </footer>
 </body>
+
 </html>
