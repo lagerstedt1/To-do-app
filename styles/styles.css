@@ -37,6 +37,7 @@ body {
 
 .large-title-text {
     position: absolute;
+    margin: 0;
     top: -80px;
     left: 0;
     font-size: 40px;
