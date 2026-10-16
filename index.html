@@ -6,17 +6,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
-  <link rel="stylesheet" href="styles/to-do.css">
-  
   <title>Todo app</title>
 
-  
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <style>
+    body {
+    margin: 0;
+    background-color: rgb(24, 24, 36);
+    font-family: 'Josefin Sans', Arial;
+    font-size: 18px;
+    z-index: 100;
+    color: grey;
+}
+.canvas {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+.card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+    .task-container {
+      display: flex;
+      align-items: center;
+    }
+    .todo-list-container .task-container {
+      border-bottom: 2px solid rgb(57, 59, 83);
+      color: white;
+    }
+    .create-todo-container {
+      margin-bottom: 40px;
+      margin-top: 40px;
+  background-color: rgb(37,39,60);
+      border-radius: 10px;
+      padding: 20px;
+      width: 80%;
+    }
+    .bottom-card-container {
+  background-color: rgb(37,39,60);
+      border-radius: 10px;
+      padding: 20px;
+      width: 80%;      
+      margin-bottom: 20px;
+    }
+    .title-and-themebutton-container {
+      display: flex;
+      align-items: center;
+      font-size: 40px;
+      font-weight: 600;
+      color: white;
+    }
+    .info-and-filters-container {
+      display: flex;
+      padding-top: 20px;
+      justify-content: space-between;
+    }
+    .task-status-button {
+      margin-right: 20px;
+    }
+    
+  </style>
 </head>
 
 <body>
@@ -26,23 +84,33 @@
   </picture>
   <div class="canvas">
     <div class="card">
-      <p class="large-title-text"> TODO </p>
+      <div class="title-and-themebutton-container">
+        <p class="large-title-text"> TODO </p>
+        <button class="theme-button">
+          <img src="images/icon-sun.svg" alt="">
+        </button>
+      </div>
+      
       <div class="create-todo-container">
         <div class="task-container">
           <button class="task-status-button"></button>
           <p class="create-task-text"> Create a new todo... </p>
         </div>
       </div>
+
+      <div class="bottom-card-container">
+        
       <div class="todo-list-container">
         <div class="task-container">
           <button class="task-status-button"></button>
           <p class="task-text"> Task text goes here </p>
         </div>
       </div>
-      <div class="info-and-filters-container">
-        <p class="num-items-text">
+        
+              <div class="info-and-filters-container">
+        <div class="num-items-text">
           5 items left
-        </p>
+        </div>
         <div class="filter-container">
           <a class="filter-activation-text" href="#">
             all
@@ -57,7 +125,9 @@
         <a class="clear-completed-text" href="#">
           clear completed
         </a>
+              </div>
       </div>
+      
       <p class="helper-text">
         Drag and drop to reorder list
       </p>
