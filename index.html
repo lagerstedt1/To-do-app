@@ -41,6 +41,7 @@
     .task-container {
       display: flex;
       align-items: center;
+      cursor: pointer;
     }
     .todo-list-container .task-container {
       border-bottom: 2px solid rgb(57, 59, 83);
@@ -98,6 +99,37 @@
       z-index: 1;
       position: absolute;
       top: 0;
+    .create-task-text {
+      font-family: 'Josefin Sans';
+  background-color: rgb(37,39,60);
+      border: none;
+      color: grey;
+      font-size: 20px;
+      width: 90%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .filter-activation-text, .filter-activation-all {
+      text-decoration: none;
+    }
+    .filter-activation-all {
+      color: rgb(12, 97, 255);
+    }
+    .filter-activation-text {
+      color: grey;
+    }
+    .clear-completed-text {
+      color: grey;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .create-todo-container {
+        width: 100%;
+      }
+      .bottom-card-container {
+        width: 100%;
+      }
     }
     
   </style>
@@ -119,7 +151,7 @@
       <div class="create-todo-container">
         <div class="task-container">
           <button class="task-status-button"></button>
-          <p class="create-task-text"> Create a new todo... </p>
+          <input class="create-task-text" placeholder="Create a new todo...">
         </div>
       </div>
 
@@ -137,7 +169,7 @@
           5 items left
         </div>
         <div class="filter-container">
-          <a class="filter-activation-text" href="#">
+          <a class="filter-activation-all" href="#">
             all
           </a>
           <a class="filter-activation-text" href="#">
