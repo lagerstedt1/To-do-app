@@ -23,13 +23,14 @@
     background-color: rgb(24, 24, 36);
     font-family: 'Josefin Sans', Arial;
     font-size: 20px;
-    z-index: 100;
     color: grey;
 }
 .canvas {
   padding: 40px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 101;
 }
 .card {
   align-items: center;
@@ -48,7 +49,7 @@
     }
     .create-todo-container {
       margin-bottom: 40px;
-      margin-top: 40px;
+      margin-top: 20px;
   background-color: rgb(37,39,60);
       border-radius: 10px;
       padding: 10px;
@@ -60,6 +61,7 @@
       padding: 10px;
       width: 80%;      
       margin-bottom: 20px;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
     }
     .title-and-themebutton-container {
       display: flex;
@@ -69,6 +71,10 @@
       color: white;
       width: 80%;
       justify-content: space-between;
+    }
+    .theme-button {
+      background: none;
+      border: none;
     }
     .info-and-filters-container {
       display: flex;
@@ -100,6 +106,17 @@
       .bottom-card-container {
         width: 100%;
       }
+    .background-picture img {
+      z-index: 1;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+    .background-picture {
+      z-index: 1;
+      position: absolute;
+      top: 0;
     }
     
   </style>
@@ -107,7 +124,6 @@
 
 <body>
   <picture class="background-picture">
-    <source srcset="images/bg-mobile-dark.jpg" media="(max-width: 768px)">
     <img src="images/bg-desktop-dark.jpg" alt="">
   </picture>
   <div class="canvas">
@@ -164,3 +180,7 @@
 </body>
 
 </html>
+
+<!--
+    <source srcset="images/bg-mobile-dark.jpg" media="(max-width: 768px)">
+-->
