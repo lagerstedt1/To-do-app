@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
-  <link rel="stylesheet" href="styles.css">
 
   <title>Todo app</title>
 
@@ -54,6 +53,8 @@
       border-radius: 10px;
       padding: 10px;
       width: 80%;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+
     }
     .bottom-card-container {
   background-color: rgb(37,39,60);
@@ -150,13 +151,10 @@
       }
     }
 
-    .light-canvas {
+    .light-body, .light-create-todo-container, .light-bottom-card-container, .light-create-task-text {
       background-color: white;
     }
-    .light-bottom-card-container {
-      background-color: white;
-    }
-    
+  
   </style>
 </head>
 <body class="active-body">
@@ -220,13 +218,17 @@
 </body>
 <script>
   function lightModeOn() {
-    const canvasElement = document.querySelector('.canvas');
-    const bottomCard = document.querySelector('.bottom-card-container')
+    const bodyElement = document.querySelector('body');
+    const bottomCard = document.querySelector('.bottom-card-container');
+    const createTodo = document.querySelector('.create-todo-container');
+    const createText = document.querySelector('.create-task-text');
     
 
-    if (canvasElement && bottomCard) {
-    canvasElement.classList.toggle('light-canvas');
+    if (bodyElement && bottomCard && createTodo && createText) {
+    bodyElement.classList.toggle('light-body');
     bottomCard.classList.toggle('light-bottom-card-container');
+    createTodo.classList.toggle('light-create-todo-container');
+    createText.classList.toggle('light-create-task-text');
     }
    
   }
