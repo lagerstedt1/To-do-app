@@ -23,6 +23,7 @@
     font-family: 'Josefin Sans', Arial;
     font-size: 20px;
     color: grey;
+    transition: 0.2s;
 }
 .canvas {
   padding: 40px;
@@ -54,6 +55,7 @@
       padding: 10px;
       width: 80%;
       box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+      transition: 0.2s;
 
     }
     .bottom-card-container {
@@ -63,6 +65,7 @@
       width: 80%;      
       margin-bottom: 20px;
       box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+      transition: 0.2s;
     }
     .title-and-themebutton-container {
       display: flex;
@@ -110,6 +113,7 @@
       width: 90%;
       padding-top: 10px;
       padding-bottom: 10px;
+      transition: 0.2s;
     }
     .filter-activation-text, .filter-activation-all {
       text-decoration: none;
@@ -132,14 +136,23 @@
     .filter-activation-text:hover {
       color: white;
     }
+    .task-status-button {
+      height: 30px;
+      width: 30px;
+      background-color: transparent;
+      border-width: 0.1px;
+      border-color: white;
+      border-style: solid;
+      border-radius: 15px;
+    }
 
-    @media (min-width: 768px) {
+    @media (min-width: 375px) {
       .mobile-dark-bg {
         display: none;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 375px) {
       .create-todo-container {
         width: 100%;
       }
@@ -153,6 +166,7 @@
 
     .light-body, .light-create-todo-container, .light-bottom-card-container, .light-create-task-text {
       background-color: white;
+      transition: 0.2s;
     }
     .light-task-text {
       color: black;
@@ -160,7 +174,7 @@
   
   </style>
 </head>
-<body class="active-body">
+<body>
   <picture class="background-picture">
     <img class="mobile-dark-bg" src="images/bg-mobile-dark.jpg" media="(max-width: 768px)">
     <img class="desktop-dark-bg" src="images/bg-desktop-dark.jpg" alt="">
