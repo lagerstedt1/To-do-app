@@ -99,6 +99,7 @@
       z-index: 1;
       position: absolute;
       top: 0;
+    }
     .create-task-text {
       font-family: 'Josefin Sans';
   background-color: rgb(37,39,60);
@@ -117,10 +118,24 @@
     }
     .filter-activation-text {
       color: grey;
+      transition: 0.15s;
     }
     .clear-completed-text {
       color: grey;
       text-decoration: none;
+      transition: 0.15s;
+    }
+    .clear-completed-text:hover {
+      color: white;
+    }
+    .filter-activation-text:hover {
+      color: white;
+    }
+
+    @media (min-width: 768px) {
+      .mobile-dark-bg {
+        display: none;
+      }
     }
 
     @media (max-width: 768px) {
@@ -130,20 +145,32 @@
       .bottom-card-container {
         width: 100%;
       }
+      .desktop-dark-bg {
+        display: none;
+      }
+    }
+
+    .light-canvas {
+      background-color: white;
+    }
+    .light-bottom-card-container {
+      background-color: white;
     }
     
   </style>
 </head>
-
-<body>
+<body class="active-body">
   <picture class="background-picture">
-    <img src="images/bg-desktop-dark.jpg" alt="">
+    <img class="mobile-dark-bg" src="images/bg-mobile-dark.jpg" media="(max-width: 768px)">
+    <img class="desktop-dark-bg" src="images/bg-desktop-dark.jpg" alt="">
   </picture>
   <div class="canvas">
     <div class="card">
       <div class="title-and-themebutton-container">
         <p class="large-title-text"> TODO </p>
-        <button class="theme-button">
+        <button class="js-theme-button theme-button" onclick="
+        lightModeOn();
+        ">
           <img src="images/icon-sun.svg" alt="">
         </button>
       </div>
@@ -191,9 +218,17 @@
     </div>
   </div>
 </body>
+<script>
+  function lightModeOn() {
+    const canvasElement = document.querySelector('.canvas');
+    const bottomCard = document.querySelector('.bottom-card-container')
+    
 
+    if (canvasElement && bottomCard) {
+    canvasElement.classList.toggle('light-canvas');
+    bottomCard.classList.toggle('light-bottom-card-container');
+    }
+   
+  }
+</script>
 </html>
-
-<!--
-    <source srcset="images/bg-mobile-dark.jpg" media="(max-width: 768px)">
--->
