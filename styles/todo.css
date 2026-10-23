@@ -24,7 +24,7 @@
       align-items: center;
     }
     .todo-list-container .task-container {
-      border-bottom: 2px solid rgb(57, 59, 83);
+      border-bottom: 1px solid rgb(167, 167, 167);
       color: white;
     }
     .create-todo-container {
@@ -170,6 +170,9 @@
     .light-body .clear-completed-text:hover,
     .light-body .filter-activation-text:hover {
       color: black;
+    }
+    .light-body .todo-list-container .task-container { 
+      border-bottom: 1px solid rgb(174, 174, 174);
     }
     .light-body .task-status-button {
       border-color: rgb(87, 87, 87);
