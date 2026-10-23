@@ -164,7 +164,19 @@
       }
     }
 
-    .light-body, .light-create-todo-container, .light-bottom-card-container, .light-create-task-text {
+    .light-body {
+      background-color: white;
+      transition: 0.2s;
+    }
+    .light-body .create-todo-container {
+      background-color: white;
+      transition: 0.2s;
+    } 
+    .light-body .bottom-card-container {
+        background-color: white;
+      transition: 0.2s;
+    }   
+    .light-body .create-task-text {
       background-color: white;
       transition: 0.2s;
     }
@@ -236,18 +248,10 @@
 <script>
   function lightModeOn() {
     const bodyElement = document.querySelector('body');
-    const bottomCard = document.querySelector('.bottom-card-container');
-    const createTodo = document.querySelector('.create-todo-container');
-    const createText = document.querySelector('.create-task-text');
-    const taskText = document.querySelector('.task-text');
     
 
-    if (bodyElement && bottomCard && createTodo && createText && taskText) {
+    if (bodyElement) {
     bodyElement.classList.toggle('light-body');
-    bottomCard.classList.toggle('light-bottom-card-container');
-    createTodo.classList.toggle('light-create-todo-container');
-    createText.classList.toggle('light-create-task-text');
-    taskText.classList.toggle('light-task-text');
     }
    
   }
