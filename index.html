@@ -41,7 +41,6 @@
     .task-container {
       display: flex;
       align-items: center;
-      cursor: pointer;
     }
     .todo-list-container .task-container {
       border-bottom: 2px solid rgb(57, 59, 83);
@@ -111,6 +110,9 @@
       padding-top: 10px;
       padding-bottom: 10px;
       transition: 0.2s;
+    }
+    .task-text {
+      cursor: pointer;
     }
     .filter-activation-text, .filter-activation-all {
       text-decoration: none;
@@ -191,6 +193,18 @@
     .light-body .task-status-button {
       border-color: rgb(87, 87, 87);
     }
+    .icon-moon {
+      display: none;
+    }
+    .light-body .icon-sun {
+      display: none;
+    }
+    .light-body .icon-moon {
+      display:block;
+    }
+    button {
+      cursor: pointer;
+    }
   
   </style>
 </head>
@@ -208,7 +222,8 @@
         <button class="js-theme-button theme-button" onclick="
         lightModeOn();
         ">
-          <img src="images/icon-sun.svg" alt="">
+          <img class="icon-sun" src="images/icon-sun.svg" alt="">
+          <img class="icon-moon" src="images/icon-moon.svg">
         </button>
       </div>
       
